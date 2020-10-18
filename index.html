@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru-RU"><head>
+    <meta charset="UTF-8">
+    
+    <title>Загрузка</title>
+    <meta name="description" content="Прелоадер">
+	
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+</head>
+<body>
+    <div id="container">
+        <div id="formBox">
+            <div id="formHolder">
+                <form>
+                    <div id="message">...</div>
+                    <div class="block">
+                        <label for="name">Ваш логин</label><input type="text" id="name" onblur="endInput(this.value, this.id)">
+                        <span>От 4 до 20 латинских букв и/или цифр</span>
+                    </div>
+                    <div class="block">
+                        <label for="email">Ваш e-mail</label><input type="email" id="email" onblur="endInput(this.value, this.id)">
+                        <span>Пример почты: my-mail@domain.com</span>
+                    </div>
+                    <div class="block">
+                        <label for="pass1">Пароль</label><input type="password" id="pass1" onblur="endInput(this.value, this.id)">
+                        <span>От 8 до 20 латинских букв и/или цифр</span>
+                    </div>
+                    <div class="block">
+                        <label for="pass2">Повторите пароль</label><input type="password" id="pass2" onblur="endInput(this.value, this.id)">
+                        <span>Вводите после ввода основного пароля</span>
+                    </div>
+                    <div class="block"><input type="reset" value="Отменить" onclick="clickEnd();" id="formReset"></div>
+                    <div class="block"><input type="button" value="Отправить" onclick="clickSend();" id="formSend"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="doorBottom" class="door"></div>
+    <div id="doorTop" class="door"></div>
+
+    <div id="buttonLine">
+        <div id="buttonContainer">
+            <button class="start" onclick="clickStart();">Заполнить форму</button>
+        </div>
+    </div>
+
+    <div id="indicatorBox"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
